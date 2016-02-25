@@ -39,7 +39,7 @@
 
 	<channel id="walkTheStreet"/>
 
-	<delayer default-delay="2000" delay-header-name="delayMe" input-channel="walkTheStreet" output-channel="grocerybags" />
+	<delayer id="walkDelayer" default-delay="2000" delay-header-name="delayMe" input-channel="walkTheStreet" output-channel="grocerybags" />
 
 	<beans:bean id="butcher" class="com.manning.siia.kitchen.shop.Butcher"/>
 	<beans:bean id="supermarket" class="com.manning.siia.kitchen.shop.Supermarket"/>

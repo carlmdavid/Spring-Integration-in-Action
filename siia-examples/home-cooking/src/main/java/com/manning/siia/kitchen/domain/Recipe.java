@@ -16,6 +16,7 @@
 
 package com.manning.siia.kitchen.domain;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
@@ -32,7 +33,9 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
  * @author Iwein Fuld
  */
 @XStreamAlias("recipe")
-public class Recipe {
+public class Recipe implements Serializable {
+
+	private static final long serialVersionUID = 2933780688557641378L;
 
 	@XStreamAsAttribute
 	private String name;

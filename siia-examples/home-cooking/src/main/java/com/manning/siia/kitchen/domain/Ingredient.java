@@ -16,6 +16,8 @@
 
 package com.manning.siia.kitchen.domain;
 
+import java.io.Serializable;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -24,7 +26,9 @@ import com.thoughtworks.xstream.annotations.XStreamConverter;
  * @author Iwein Fuld
  */
 @XStreamAlias("ingredient")
-public class Ingredient {
+public class Ingredient implements Serializable {
+
+	private static final long serialVersionUID = -5292142490202594064L;
 
 	public enum Type {
 		Meat, Vegetable, Grocery

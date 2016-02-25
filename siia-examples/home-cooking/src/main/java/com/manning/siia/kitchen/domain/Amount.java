@@ -16,10 +16,14 @@
 
 package com.manning.siia.kitchen.domain;
 
+import java.io.Serializable;
+
 /**
  * @author Iwein Fuld
  */
-public class Amount {
+public class Amount implements Serializable {
+
+	private static final long serialVersionUID = 6073176484935174602L;
 
 	private int amount;
 
