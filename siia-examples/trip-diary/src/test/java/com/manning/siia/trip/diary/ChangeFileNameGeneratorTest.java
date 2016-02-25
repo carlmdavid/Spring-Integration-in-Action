@@ -20,10 +20,10 @@ import static org.junit.Assert.assertThat;
 import static org.junit.matchers.JUnitMatchers.containsString;
 import static org.mockito.Mockito.mock;
 
-import org.junit.Test;
-import org.springframework.integration.Message;
-
 import java.lang.management.ManagementFactory;
+
+import org.junit.Test;
+import org.springframework.messaging.Message;
 
 /**
  * @author Iwein Fuld

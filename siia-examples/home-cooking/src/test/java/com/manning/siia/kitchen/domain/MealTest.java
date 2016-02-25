@@ -16,17 +16,14 @@
 
 package com.manning.siia.kitchen.domain;
 
-import com.manning.siia.kitchen.domain.Meal;
-import com.manning.siia.kitchen.domain.Product;
-import com.manning.siia.kitchen.domain.Recipe;
-import org.junit.Test;
-
-import java.util.Arrays;
-
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
+
+import java.util.Arrays;
+
+import org.junit.Test;
 
 /**
  * @author Iwein Fuld

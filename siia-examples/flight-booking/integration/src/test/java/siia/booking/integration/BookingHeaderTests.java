@@ -31,11 +31,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.integration.Message;
-import org.springframework.integration.MessageChannel;
-import org.springframework.integration.MessageHeaders;
-import org.springframework.integration.core.PollableChannel;
+import org.springframework.integration.IntegrationMessageHeaderAccessor;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.PollableChannel;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -97,7 +97,7 @@ public class BookingHeaderTests {
 		assertThat(reply, hasCorrelationId("ABC"));
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("command", testBookFlightCommand);
-		map.put(MessageHeaders.CORRELATION_ID, "ABC");
+		map.put(IntegrationMessageHeaderAccessor.CORRELATION_ID, "ABC");
 		assertThat(reply, hasAllHeaders(map));
 	}
 

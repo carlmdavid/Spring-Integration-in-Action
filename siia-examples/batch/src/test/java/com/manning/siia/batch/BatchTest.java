@@ -23,9 +23,9 @@ import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.integration.Message;
 import org.springframework.integration.channel.QueueChannel;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.messaging.Message;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -49,7 +49,7 @@ public class BatchTest {
         JobExecution jobExecution = ((Message<JobExecution>) statusesChannel.receive(120000)).getPayload();
         ExitStatus exitStatus = jobExecution.getExitStatus();
         Assert.assertEquals(ExitStatus.COMPLETED, exitStatus);
-        int count = jdbcTemplate.queryForInt("select count(*) from payments");
+        int count = jdbcTemplate.queryForObject("select count(*) from payments", Integer.class);
         Assert.assertEquals(27, count);
     }
 }

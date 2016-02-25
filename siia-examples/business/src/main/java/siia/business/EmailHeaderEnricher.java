@@ -16,13 +16,13 @@
 
 package siia.business;
 
-import org.springframework.integration.Message;
+import java.util.Map;
+
 import org.springframework.integration.annotation.Headers;
 import org.springframework.integration.annotation.MessageEndpoint;
 import org.springframework.integration.mail.MailHeaders;
 import org.springframework.integration.support.MessageBuilder;
-
-import java.util.Map;
+import org.springframework.messaging.Message;
 
 /**
  * @author Mark Fisher

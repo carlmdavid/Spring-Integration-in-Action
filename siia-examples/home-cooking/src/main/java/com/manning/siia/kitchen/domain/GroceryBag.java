@@ -16,9 +16,9 @@
 
 package com.manning.siia.kitchen.domain;
 
-import com.google.common.collect.Sets;
-
 import java.util.Set;
+
+import com.google.common.collect.Sets;
 
 /**
  * @author Iwein Fuld

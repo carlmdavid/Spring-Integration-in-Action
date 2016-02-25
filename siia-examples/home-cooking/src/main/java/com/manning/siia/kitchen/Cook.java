@@ -16,18 +16,19 @@
 
 package com.manning.siia.kitchen;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.integration.annotation.Aggregator;
+import org.springframework.integration.annotation.CorrelationStrategy;
+import org.springframework.integration.annotation.ReleaseStrategy;
+import org.springframework.messaging.Message;
+
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import com.manning.siia.kitchen.domain.Meal;
 import com.manning.siia.kitchen.domain.Product;
 import com.manning.siia.kitchen.domain.Recipe;
-import org.springframework.integration.Message;
-import org.springframework.integration.annotation.Aggregator;
-import org.springframework.integration.annotation.CorrelationStrategy;
-import org.springframework.integration.annotation.ReleaseStrategy;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * I am in control of the kitchen.

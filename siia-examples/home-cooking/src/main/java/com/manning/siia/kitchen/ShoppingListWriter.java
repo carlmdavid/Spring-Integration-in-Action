@@ -16,12 +16,13 @@
 
 package com.manning.siia.kitchen;
 
-import com.manning.siia.kitchen.domain.Ingredient;
-import com.manning.siia.kitchen.domain.ShoppingList;
+import java.util.List;
+
 import org.springframework.integration.annotation.Aggregator;
 import org.springframework.integration.annotation.CorrelationStrategy;
 
-import java.util.List;
+import com.manning.siia.kitchen.domain.Ingredient;
+import com.manning.siia.kitchen.domain.ShoppingList;
 
 /**
  * I write out shoppinglists, whilst ensuring that on each shoppinglist only ingredients

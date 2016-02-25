@@ -16,20 +16,19 @@
 
 package com.manning.siia.kitchen.domain;
 
-import com.manning.siia.kitchen.domain.Ingredient;
-import com.manning.siia.kitchen.domain.Recipe;
-import com.thoughtworks.xstream.XStream;
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+import java.io.IOException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.IOException;
-
-import static com.manning.siia.kitchen.domain.Amount.Unit;
-import static com.manning.siia.kitchen.domain.Ingredient.Type;
-import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import com.manning.siia.kitchen.domain.Amount.Unit;
+import com.manning.siia.kitchen.domain.Ingredient.Type;
+import com.thoughtworks.xstream.XStream;
 
 /**
  * @author Iwein Fuld

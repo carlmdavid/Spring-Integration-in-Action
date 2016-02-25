@@ -16,9 +16,9 @@
 
 package com.manning.siia.trip.diary;
 
-import org.springframework.integration.file.filters.AbstractFileListFilter;
-
 import java.io.File;
+
+import org.springframework.integration.file.filters.AbstractFileListFilter;
 
 /**
  * @author Iwein Fuld

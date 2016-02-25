@@ -16,11 +16,12 @@
 
 package com.manning.siia.kitchen.shop;
 
+import org.springframework.integration.annotation.Transformer;
+
 import com.manning.siia.kitchen.domain.GroceryBag;
 import com.manning.siia.kitchen.domain.Ingredient;
 import com.manning.siia.kitchen.domain.Meat;
 import com.manning.siia.kitchen.domain.ShoppingList;
-import org.springframework.integration.annotation.Transformer;
 
 /** 
  * @author Iwein Fuld

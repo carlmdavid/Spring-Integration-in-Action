@@ -19,9 +19,9 @@ package siia.monitoring.wiretap;
 import java.math.BigDecimal;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.integration.Message;
-import org.springframework.integration.MessageChannel;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageChannel;
 
 /**
  * @author Mark Fisher

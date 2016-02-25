@@ -16,20 +16,25 @@
 
 package com.manning.siia.kitchen;
 
-import com.manning.siia.kitchen.domain.*;
-import org.junit.Test;
-import org.springframework.beans.DirectFieldAccessor;
-import org.springframework.integration.Message;
-import org.springframework.integration.support.MessageBuilder;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasItems;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.Matchers.hasItems;
-import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.mock;
+import org.junit.Test;
+import org.springframework.beans.DirectFieldAccessor;
+import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
+
+import com.manning.siia.kitchen.domain.Grocery;
+import com.manning.siia.kitchen.domain.Meal;
+import com.manning.siia.kitchen.domain.Meat;
+import com.manning.siia.kitchen.domain.Product;
+import com.manning.siia.kitchen.domain.Recipe;
 
 /**
  * @author Iwein Fuld

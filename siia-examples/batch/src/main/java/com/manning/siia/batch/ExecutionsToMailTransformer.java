@@ -17,10 +17,10 @@
 package com.manning.siia.batch;
 
 import org.springframework.batch.core.JobExecution;
-import org.springframework.integration.Message;
 import org.springframework.integration.annotation.Transformer;
 import org.springframework.integration.mail.MailHeaders;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
 
 /**
  * @author Marius Bogoevici

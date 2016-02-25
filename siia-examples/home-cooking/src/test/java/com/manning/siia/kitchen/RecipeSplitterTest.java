@@ -16,20 +16,26 @@
 
 package com.manning.siia.kitchen;
 
-import com.manning.siia.kitchen.domain.Amount;
-import com.manning.siia.kitchen.domain.*;
+import static org.hamcrest.Matchers.instanceOf;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.integration.Message;
-import org.springframework.integration.MessageChannel;
-import org.springframework.integration.core.PollableChannel;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.PollableChannel;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertThat;
+import com.manning.siia.kitchen.domain.Amount;
+import com.manning.siia.kitchen.domain.Grocery;
+import com.manning.siia.kitchen.domain.Ingredient;
+import com.manning.siia.kitchen.domain.Recipe;
+import com.manning.siia.kitchen.domain.RecipeObjectMother;
 
 /**
  * @author Iwein Fuld

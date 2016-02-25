@@ -18,9 +18,9 @@ package siia.jms;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.integration.MessageChannel;
 import org.springframework.integration.core.MessagingTemplate;
-import org.springframework.integration.core.PollableChannel;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.PollableChannel;
 
 /**
  * @author Mark Fisher
@@ -33,7 +33,7 @@ public class GatewayDemo {
 		PollableChannel jmsReplies = context.getBean("jmsReplies", PollableChannel.class);
 		MessagingTemplate template = new MessagingTemplate();
 		template.convertAndSend(toJMS, "echo");
-		Object response = template.receiveAndConvert(jmsReplies);
+		Object response = template.receiveAndConvert(jmsReplies, Object.class);
 		System.out.println("response: " + response);
 	}
 

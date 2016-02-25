@@ -16,8 +16,6 @@
 
 package com.manning.siia.kitchen.domain;
 
-import com.manning.siia.kitchen.domain.Amount;
-import com.manning.siia.kitchen.domain.AmountConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamConverter;

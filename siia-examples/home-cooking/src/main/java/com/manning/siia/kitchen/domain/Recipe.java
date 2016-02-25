@@ -16,15 +16,15 @@
 
 package com.manning.siia.kitchen.domain;
 
+import java.util.Collection;
+import java.util.List;
+
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
-
-import java.util.Collection;
-import java.util.List;
 
 /**
  * A Recipe consists of Ingredients and has a name.

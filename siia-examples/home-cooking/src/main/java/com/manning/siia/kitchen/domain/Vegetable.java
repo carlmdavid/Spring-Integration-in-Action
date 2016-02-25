@@ -16,8 +16,6 @@
 
 package com.manning.siia.kitchen.domain;
 
-import com.manning.siia.kitchen.domain.Amount;
-
 /**
  * @author Iwein Fuld
  */

@@ -21,8 +21,8 @@ import java.util.List;
 import org.springframework.batch.core.listener.ItemListenerSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.integration.MessageChannel;
 import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.MessageChannel;
 
 /**
  * @author Marius Bogoevici

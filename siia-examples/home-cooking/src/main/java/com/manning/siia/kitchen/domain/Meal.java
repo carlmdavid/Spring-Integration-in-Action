@@ -16,10 +16,11 @@
 
 package com.manning.siia.kitchen.domain;
 
-import com.google.common.collect.Lists;
+import java.util.List;
+
 import org.springframework.util.Assert;
 
-import java.util.List;
+import com.google.common.collect.Lists;
 
 /**
  * @author Iwein Fuld

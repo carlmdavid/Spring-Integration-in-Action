@@ -16,13 +16,15 @@
 
 package com.manning.siia.kitchen;
 
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.integration.annotation.Filter;
+
 import com.google.common.collect.Lists;
 import com.manning.siia.kitchen.domain.Ingredient;
 import com.manning.siia.kitchen.domain.Product;
-import org.springframework.integration.annotation.Filter;
-
-import javax.annotation.PostConstruct;
-import java.util.List;
 
 /** 
  * @author Iwein Fuld

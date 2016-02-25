@@ -16,8 +16,8 @@
 
 package com.manning.siia.trip.diary;
 
-import org.springframework.integration.Message;
 import org.springframework.integration.file.FileNameGenerator;
+import org.springframework.messaging.Message;
 
 /**
  * @author Iwein Fuld
