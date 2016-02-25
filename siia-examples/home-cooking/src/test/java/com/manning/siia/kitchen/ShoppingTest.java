@@ -62,7 +62,7 @@ public class ShoppingTest {
 
 	private void receiveAndCheckProductMessage(final List<Ingredient> ingredients) {
 		final TimedPollableChannel timed = new TimedPollableChannel(test);
-		final Message<Product> message = timed.receive(2500);
+		final Message<Product> message = timed.receive(10000);
 		assertThat("Message was null", message, is(notNullValue()));
 		assertThat(message.getHeaders().get("recipe"), is(instanceOf(Recipe.class)));
 		boolean found = false;

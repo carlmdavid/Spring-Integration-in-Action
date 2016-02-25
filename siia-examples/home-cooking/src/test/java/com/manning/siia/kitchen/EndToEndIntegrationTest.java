@@ -57,9 +57,10 @@ public class EndToEndIntegrationTest {
 		File recipeWriting = recipeBookLocation.newFile("pilav.xml.writing");
 		FileUtils.copyFile(resource, recipeWriting);
 		//then rename
-		recipeWriting.renameTo(recipeBookLocation.newFile("pilav.xml"));
+//		recipeWriting.renameTo(recipeBookLocation.newFile("pilav.xml"));
+		FileUtils.copyFile(recipeWriting, recipeBookLocation.newFile("pilav.xml"));
 
-        Message<?> message = timed.receive(3500);
+        Message<?> message = timed.receive(15000);
 	    assertThat(message, is(notNullValue()));
         Meal meal = (Meal) message.getPayload();
         assertThat(meal.getRecipe().getName(), is("Pilav"));
