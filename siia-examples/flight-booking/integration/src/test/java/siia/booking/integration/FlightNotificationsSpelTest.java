@@ -82,12 +82,12 @@ public class FlightNotificationsSpelTest {
         given(mockedTripRepository.findTripsRelatedTo(flight)).willReturn(relatedTrips);
         flightNotifications.send(testMessage);
         Message<TripNotification> tripNotificationMessage1 =
-                (Message<TripNotification>) interceptedTripNotifications.receive(1000);
+                (Message<TripNotification>) interceptedTripNotifications.receive(10000);
         assertThat(tripNotificationMessage1, is(notNullValue()));
         assertThat((List<Trip>) tripNotificationMessage1.getHeaders().get("affectedTrips"), is(relatedTrips));
         assertThat(tripNotificationMessage1.getPayload().getTrip(), is(sameInstance(trip1)));
         Message<TripNotification> tripNotificationMessage2 =
-                (Message<TripNotification>) interceptedTripNotifications.receive(1000);
+                (Message<TripNotification>) interceptedTripNotifications.receive(10000);
         assertThat(tripNotificationMessage2.getPayload().getTrip(), is(sameInstance(trip2)));
     }
 
