@@ -81,7 +81,7 @@
     </si:router>
 
     <si:chain input-channel="jobRestarts">
-        <si:delayer default-delay="10000"/>
+        <si:delayer id="jobDelayer" default-delay="10000"/>
         <si:service-activator>
             <bean class="com.manning.siia.batch.JobRestart"/>
         </si:service-activator>
